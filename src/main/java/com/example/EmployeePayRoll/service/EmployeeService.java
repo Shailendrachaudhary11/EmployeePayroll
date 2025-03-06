@@ -27,4 +27,13 @@ public class EmployeeService {
                 .map(emp -> new EmployeeDTO(emp.getName(), emp.getSalary()))
                 .collect(Collectors.toList());
     }
+
+    public EmployeeDTO getEmployeeById(Long id) {
+        Employee employee = employeeRepository.findById(id).orElse(null);
+        return employee != null ? new EmployeeDTO(employee.getName(), employee.getSalary()) : null;
+    }
+
+    public void deleteEmployee(Long id) {
+        employeeRepository.deleteById(id);
+    }
 }
