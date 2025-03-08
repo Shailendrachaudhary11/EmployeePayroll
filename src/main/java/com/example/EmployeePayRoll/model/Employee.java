@@ -18,7 +18,8 @@ public class Employee {
 
     public Employee() {}
 
-    public Employee(String name, double salary) {
+    public Employee(Long id,String name, double salary) {
+        this.id = id;
         this.name = name;
         this.salary = salary;
     }
