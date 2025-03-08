@@ -27,12 +27,12 @@ public class EmployeeController {
         return employee != null ? ResponseEntity.ok(employee) : ResponseEntity.notFound().build();
     }
 
-    @PostMapping
+    @PostMapping("/add")
     public Employee addEmployee(@RequestBody Employee employee) {
         return service.saveEmployee(employee);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteEmployee(@PathVariable Long id) {
         boolean deleted = service.deleteEmployee(id);
         return deleted ? ResponseEntity.noContent().build() : ResponseEntity.notFound().build();

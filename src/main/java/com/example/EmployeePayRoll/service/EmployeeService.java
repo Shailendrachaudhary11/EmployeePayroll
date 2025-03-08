@@ -5,6 +5,7 @@ import com.example.EmployeePayRoll.model.Employee;
 import com.example.EmployeePayRoll.service.EmployeeService;
 import com.example.EmployeePayRoll.repository.EmployeeRepository;
 //import org.springframework.beans.factory.annotation.Autowired;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
+@Slf4j
 @Service
 public class EmployeeService {
 
